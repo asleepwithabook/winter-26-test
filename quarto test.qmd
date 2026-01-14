@@ -1,0 +1,19 @@
+---
+title: "test plot"
+format: html
+---
+
+initializing libraries
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+```
+
+showing most common flight departure times
+
+```{r}
+flights |> 
+  ggplot(aes(dep_time)) +
+  geom_histogram(bin_width = 600, na.rm = TRUE)
+```
